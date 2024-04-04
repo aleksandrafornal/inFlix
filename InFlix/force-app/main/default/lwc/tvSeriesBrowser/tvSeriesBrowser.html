@@ -1,0 +1,38 @@
+<template>
+    <template if:true={stepEqualsTVSeries}>
+        <lightning-card title="Select TV Series">
+            <div class="container">
+                <template for:each={tvSeries} for:item="series">
+                    <c-tile key={series.id} product={series} ontileclick={handleTVSeriesSelection}>
+                    </c-tile>
+                </template>
+            </div>
+        </lightning-card>
+    </template>
+
+    <template if:true={stepEqualsSeasons}>
+        <lightning-card title="Select Season">
+            <lightning-datatable key-field="Id" data={seasons} columns={seasonsColumns}
+                onrowselection={handleSeasonSelection}>
+            </lightning-datatable>
+            <div class="space"></div>
+            <lightning-button class="button" variant="brand" label="Back to TV Series"
+                onclick={handleBackToTVSeries}></lightning-button>
+        </lightning-card>
+    </template>
+
+    <template if:true={stepEqualsEpisodes}>
+        <lightning-card title="Select Episode">
+            <lightning-datatable key-field="Id" data={episodes} columns={episodesColumns}
+                onrowselection={handleEpisodeSelection}>
+            </lightning-datatable>
+            <div class="space"></div>
+            <lightning-button class="button" variant="brand" label="Back to Seasons"
+                onclick={handleBackToSeasons}></lightning-button>
+        </lightning-card>
+    </template>
+
+    <template if:true={stepEqualsEpisodeDetails}>
+        <c-episode-details episode-id={selectedEpisodeId} onbacktoepisodes={handleBackToEpisodes}></c-episode-details>
+    </template>
+</template>

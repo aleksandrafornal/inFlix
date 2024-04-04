@@ -1,0 +1,15 @@
+<template>
+    <template if:true={stepEqualsMovies}>
+        <lightning-card title="Select Movie">
+            <div class="container">
+                <template for:each={movies} for:item="movie">
+                    <c-tile key={movie.id} product={movie} ontileclick={handleMovieSelection}>
+                    </c-tile>
+                </template>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:true={stepEqualsMovieDetails}>
+        <c-movie-details movie-id={selectedMovieId} onbacktomovies={handleBackToMovies}></c-movie-details>
+    </template>
+</template>

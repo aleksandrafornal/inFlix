@@ -44,12 +44,12 @@ public with sharing class NewTVSeriesEmailSender {
                 email.setSubject('New TV series have been added');
  
                 String emailBody = 'Welcome!<br/><br/>New TV series have been added:<br/><br/>';
-                for(TV_Series__c tVSeries : newTVSeries){
-                    emailBody += 'Id of new TV series: ' + tVSeries.Id + '<br/>';
-                    emailBody += 'Title of new TV series: ' + tVSeries.Name + '<br/>';
-                    emailBody += 'Genres of new TV series: ' + tVSeries.Genres__c + '<br/>';
-                    emailBody += 'Director of new TV series: ' + tVSeries.Director__c + '<br/>';
-                    emailBody += 'Trailer for new TV series: ' + tVSeries.Trailer__c + '<br/><br/>';
+                for(TV_Series__c tvSeries : newTVSeries){
+                    emailBody += 'Id of new TV series: ' + tvSeries.Id + '<br/>';
+                    emailBody += 'Title of new TV series: ' + tvSeries.Name + '<br/>';
+                    emailBody += 'Genres of new TV series: ' + tvSeries.Genres__c + '<br/>';
+                    emailBody += 'Director of new TV series: ' + tvSeries.Director__c + '<br/>';
+                    emailBody += 'Trailer for new TV series: ' + tvSeries.Trailer__c + '<br/><br/>';
                 }
 
                 emailBody += 'Have a nice day!';
