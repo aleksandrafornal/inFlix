@@ -1,0 +1,10 @@
+<template>
+    <template if:true={tvSeriesLogoUrl}>
+        <img class="logo" src={tvSeriesLogoUrl} alt="TV Series Logo" />
+    </template>
+    <template if:false={tvSeriesLogoUrl}>
+        <div class="message">
+            There is no logo for this TV Series, but feel free to add it!
+        </div>
+    </template>
+</template>

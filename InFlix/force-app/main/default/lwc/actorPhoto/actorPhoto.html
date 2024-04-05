@@ -1,0 +1,10 @@
+<template>
+    <template if:true={actorPhotoUrl}>
+        <img src={actorPhotoUrl} alt="Actor Photo" />
+    </template>
+    <template if:false={actorPhotoUrl}>
+        <div class="message">
+            There is no photo for this Actor, but feel free to add it!
+        </div>
+    </template>
+</template>
