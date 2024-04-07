@@ -1,0 +1,17 @@
+<template>
+    <template lwc:if={selectedRecipe}>
+        <div class="details-container">
+            <lightning-card title="Recipe Details"></lightning-card>
+            <img class="logo" src={selectedRecipe.Photo__c}></img>
+            <div class="detail-item">Name: {selectedRecipe.Name}</div>
+            <div class="detail-item">Diet: {selectedRecipe.Diet__c}</div>
+            <div class="detail-item">Ingredients: {selectedRecipe.Ingredients__c}</div>
+            <div class="detail-item">Preparation: {selectedRecipe.Preparation__c}</div>
+            <lightning-button class="recipes-button" variant="brand" label="Back to Recipes"
+                onclick={handleBackToRecipes}></lightning-button>
+        </div>
+    </template>
+    <template lwc:else>
+        <div>Select a recipe</div>
+    </template>
+</template>

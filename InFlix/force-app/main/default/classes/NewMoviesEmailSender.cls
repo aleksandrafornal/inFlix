@@ -56,7 +56,6 @@ public with sharing class NewMoviesEmailSender{
  
                 email.setHtmlBody(emailBody);
                 email.setToAddresses(new List<String>(emailAddresses));
-                email.setSaveAsActivity(false);
  
                 try {
                     Messaging.sendEmail(new Messaging.SingleEmailMessage[] {email});

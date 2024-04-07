@@ -1,0 +1,10 @@
+<template>
+    <template if:true={recipePhotoUrl}>
+        <img src={recipePhotoUrl} alt="Recipe Photo" />
+    </template>
+    <template if:false={recipePhotoUrl}>
+        <div class="message">
+            Unfortunately there is no photo for this recipe
+        </div>
+    </template>
+</template>

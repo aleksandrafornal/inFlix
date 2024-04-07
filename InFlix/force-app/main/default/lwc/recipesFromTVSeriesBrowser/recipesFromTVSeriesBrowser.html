@@ -1,0 +1,15 @@
+<template>
+    <template if:true={stepEqualsRecipes}>
+        <lightning-card title="Select Recipe">
+            <div class="container">
+                <template for:each={recipes} for:item="recipe">
+                    <c-tile key={recipe.id} product={recipe} ontileclick={handleRecipeSelection}>
+                    </c-tile>
+                </template>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:true={stepEqualsRecipeDetails}>
+        <c-recipe-details recipe-id={selectedRecipeId} onbacktorecipes={handleBackToRecipes}></c-recipe-details>
+    </template>
+</template>
