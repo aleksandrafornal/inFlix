@@ -52,7 +52,8 @@ public class RecipesControllerTest {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024
-     * @description Test method to verify that all recipes related to TV Series are returned alphabetically.
+     * @description Test method to verify that all recipes related to TV Series are returned 
+     * alphabetically.
      */
     @isTest
     static void shouldReturnAllRecipesRelatedToTVSeries() {
@@ -75,7 +76,8 @@ public class RecipesControllerTest {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024
-     * @description Test method to verify that all recipes related to movies are returned alphabetically.
+     * @description Test method to verify that all recipes related to movies are returned 
+     * alphabetically.
      */
     @isTest
     static void shouldReturnAllRecipesRelatedToMovies() {

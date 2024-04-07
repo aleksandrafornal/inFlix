@@ -4,7 +4,7 @@
  * @description This class contains test methods for the TVSeriesController.
  */
 @isTest
-public with sharing class TVSeriesControllerTest {
+public class TVSeriesControllerTest {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024

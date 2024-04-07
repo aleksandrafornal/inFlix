@@ -1,4 +1,9 @@
-public with sharing class RecipesController {
+/**
+ * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
+ * @date 03/04/2024
+ * @description This class provides methods for Recipe browser and details component.
+ */
+public class RecipesController {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 06/04/2024

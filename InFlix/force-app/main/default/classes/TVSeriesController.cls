@@ -3,7 +3,7 @@
  * @date 03/04/2024
  * @description This class provides methods for TV series browser and episode details component.
  */
-public with sharing class TVSeriesController {
+public class TVSeriesController {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 03/04/2024

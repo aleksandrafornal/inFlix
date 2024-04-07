@@ -3,7 +3,7 @@
  * @date 03/04/2024
  * @description This class is responsible for sending email notifications about new movies.
  */
-public with sharing class NewMoviesEmailSender{
+public class NewMoviesEmailSender{
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 03/04/2024

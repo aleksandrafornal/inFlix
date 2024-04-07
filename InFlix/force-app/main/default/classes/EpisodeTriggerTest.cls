@@ -115,8 +115,8 @@
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024
-     * @description Test method to check the behavior when the newly inserted episodes TV Series is different 
-     * than the one in season.
+     * @description Test method to check the behavior when the newly inserted episodes TV Series is 
+     * different than the one in season.
      */
     @isTest
     static void shouldConflictWhenInsertedAndTVSeriesIsDifferent() {
@@ -145,7 +145,8 @@
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024
-     * @description Test method to check the behavior when the newly inserted episodes has name that already exists in TV series.
+     * @description Test method to check the behavior when the newly inserted episodes has name that 
+     * already exists in TV series.
      */
     @isTest
     static void shouldConflictWhenInsertedAndNameAlreadyExists() {
@@ -170,7 +171,8 @@
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024
-     * @description Test method to check the behavior when the updated episodes has name that already exists in TV series.
+     * @description Test method to check the behavior when the updated episodes has name that already 
+     * exists in TV series.
      */
     @isTest
     static void shouldConflictWhenUpdateddAndNameAlreadyExists() {

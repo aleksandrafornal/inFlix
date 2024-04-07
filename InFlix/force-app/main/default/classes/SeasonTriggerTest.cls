@@ -104,7 +104,8 @@ public class SeasonTriggerTest {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024
-     * @description Test method to check the behavior when the newly inserted season has name that already exists in TV series.
+     * @description Test method to check the behavior when the newly inserted season has name that 
+     * already exists in TV series.
      */
     @isTest
     static void shouldConflictWhenInsertedAndNameAlreadyExists() {
@@ -128,7 +129,8 @@ public class SeasonTriggerTest {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 07/04/2024
-     * @description Test method to check the behavior when the updated season has name that already exists in TV series.
+     * @description Test method to check the behavior when the updated season has name that already 
+     * exists in TV series.
      */
     @isTest
     static void shouldConflictWhenUpdateddAndNameAlreadyExists() {
