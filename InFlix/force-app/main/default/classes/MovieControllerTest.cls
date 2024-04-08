@@ -19,10 +19,8 @@ public class MovieControllerTest {
                 Length_min__c = 120 + i,
                 Description__c = 'TestDescription' + i,
                 Genres__c = 'Action',
-                Favorite__c = false,
-                To_watch__c = false,
                 Poster__c = 'TestPoster' + i,
-                Trailer__c = 'TestTrailer' + i
+                Trailer__c = 'https://www.youtube.com/embed/' + i
                 )
             );
         }
@@ -64,8 +62,6 @@ public class MovieControllerTest {
             Length_min__c,
             Description__c,
             Genres__c,
-            Favorite__c,
-            To_watch__c,
             Poster__c,
             Trailer__c
         FROM Movie__c
@@ -118,16 +114,6 @@ public class MovieControllerTest {
               expectedMovie.Trailer__c,
               returnedMovie.Trailer__c,
               'Incorrect movie trailer was returned'
-            );
-            System.assertEquals(
-              expectedMovie.Favorite__c,
-              returnedMovie.Favorite__c,
-              'Incorrect movie favorite field was returned'
-            );
-            System.assertEquals(
-              expectedMovie.To_watch__c,
-              returnedMovie.To_watch__c,
-              'Incorrect movie to watch field was returned'
             );
         }
     }

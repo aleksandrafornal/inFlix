@@ -28,7 +28,7 @@ public class NewTVSeriesEmailSenderTest {
     static void shouldSendOneEmailIfNewTVSeriesAreInserted() {
         List<TV_Series__c> newTVSeries = new List<TV_Series__c>();
         for (Integer i = 0; i < 5; i++) {
-            newTVSeries.add(new TV_Series__c(Name = 'TestTVSeries' + i));
+            newTVSeries.add(new TV_Series__c(Name = 'TestTVSeries' + i, Genres__c = 'Fantasy'));
         }
 
         Test.startTest();

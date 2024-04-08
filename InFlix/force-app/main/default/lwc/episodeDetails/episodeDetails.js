@@ -3,7 +3,6 @@ import getEpisodeDetails from "@salesforce/apex/TVSeriesController.getEpisodeDet
 
 export default class EpisodeDetails extends LightningElement {
   @api episodeId;
-  watched;
   selectedEpisode;
   showSuccessMessage = false;
   showErrorMessage = false;
@@ -13,7 +12,6 @@ export default class EpisodeDetails extends LightningElement {
     if (data) {
       console.log(data)
       this.selectedEpisode = data;
-      this.watched = data.Watched__c;
     } else if (error) {
       console.error(error);
     }
@@ -22,10 +20,6 @@ export default class EpisodeDetails extends LightningElement {
   handleBackToEpisodes() {
     const backToEpisodesEvent = new CustomEvent("backtoepisodes");
     this.dispatchEvent(backToEpisodesEvent);
-  }
-
-  saveWatched() {
-    this.template.querySelector("lightning-record-edit-form").submit();
   }
 
   handleSuccess() {

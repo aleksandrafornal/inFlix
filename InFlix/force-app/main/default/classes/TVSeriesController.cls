@@ -3,7 +3,7 @@
  * @date 03/04/2024
  * @description This class provides methods for TV series browser and episode details component.
  */
-public class TVSeriesController {
+public with sharing class TVSeriesController {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 03/04/2024
@@ -75,7 +75,6 @@ public class TVSeriesController {
           Title__c,
           Length_min__c,
           Description__c,
-          Watched__c,
           TV_Series__r.Logo__c, 
           TV_Series__r.Trailer__c
         FROM Episode__c

@@ -28,7 +28,7 @@ public class NewMoviesEmailSenderTest {
     static void shouldSendOneEmailIfNewMoviesAreInserted() {
         List<Movie__c> newMovies = new List<Movie__c>();
         for (Integer i = 0; i < 5; i++) {
-            newMovies.add(new Movie__c(Name = 'TestMovie' + i));
+            newMovies.add(new Movie__c(Name = 'TestMovie' + i, Genres__c = 'Fantasy'));
         }
 
         Test.startTest();

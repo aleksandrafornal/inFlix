@@ -8,3 +8,12 @@
 .detail-item {
     margin-bottom: 0.5rem;
 }
+
+.space {
+    height: 10px;
+}
+
+.logo {
+    width: 300px; 
+    height: auto;
+}

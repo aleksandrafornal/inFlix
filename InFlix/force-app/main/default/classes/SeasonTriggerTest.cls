@@ -11,7 +11,7 @@ public class SeasonTriggerTest {
      * @description The method sets up data for tests.
      */
     @testSetup static void setup() {
-        TV_Series__c tvSeries = new TV_Series__c(Name = 'TestTVSeries');
+        TV_Series__c tvSeries = new TV_Series__c(Name = 'TestTVSeries', Genres__c='Fantasy');
         insert tvSeries;
 
         List<Season__c> seasons = new List<Season__c>();
@@ -62,7 +62,7 @@ public class SeasonTriggerTest {
         TV_Series__c tvSeries = [SELECT Id FROM TV_Series__c LIMIT 1];
 
         List<Season__c> seasons = new List<Season__c>();
-        for (Integer i = 6; i < 9; i++) {
+        for (Integer i = 6; i < 10; i++) {
             seasons.add(new Season__c(Name = 'TestTVSeries S0' + i, TV_Series__c = tvSeries.Id));
         }
 

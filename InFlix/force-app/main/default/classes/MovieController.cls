@@ -3,7 +3,7 @@
  * @date 04/04/2024
  * @description This class provides methods for movies browser and details component.
  */
-public class MovieController {
+public with sharing class MovieController {
     /**
      * @author Aleksandra Fornal <aleksandrafornal@accenture.com>
      * @date 04/04/2024
@@ -38,8 +38,6 @@ public class MovieController {
           Length_min__c,
           Description__c,
           Genres__c,
-          Favorite__c,
-          To_watch__c,
           Poster__c,
           Trailer__c
         FROM Movie__c

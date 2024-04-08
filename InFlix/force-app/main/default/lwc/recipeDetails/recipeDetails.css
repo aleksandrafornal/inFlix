@@ -8,3 +8,8 @@
 .detail-item {
     margin-bottom: 0.5rem;
 }
+
+.logo {
+    width: 300px; 
+    height: auto;
+}

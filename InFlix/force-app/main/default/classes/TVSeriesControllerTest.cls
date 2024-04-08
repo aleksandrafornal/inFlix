@@ -17,7 +17,8 @@ public class TVSeriesControllerTest {
             testTVSeries.add(new TV_Series__c(
                 Name = 'TestTVSeries' + i,
                 Logo__c = 'TestTVSeriesLogo' + i,
-                Trailer__c = 'TestTVSeriesTrailer' + i
+                Trailer__c = 'https://www.youtube.com/embed/' + i,
+                Genres__c = 'Fantasy'
                 )
             );
         }
@@ -36,13 +37,12 @@ public class TVSeriesControllerTest {
         List<Episode__c> testEpisodes = new List<Episode__c>();
         for (Integer i = 0; i < 5; i++) {
             testEpisodes.add(new Episode__c(
-                Name = testSeasons[0].Name + 'E00' + i,
+                Name = testSeasons[0].Name + 'E000' + i,
                 Length_min__c = 50,
                 TV_Series__c = testTVSeries[0].Id,
                 Season__c = testSeasons[0].Id,
                 Title__c = 'TestEpisodeTitle' + i,
-                Description__c = 'TestEpisodeDescription' + i,
-                Watched__c = false
+                Description__c = 'TestEpisodeDescription' + i
                 )
             );
         }
@@ -130,7 +130,6 @@ public class TVSeriesControllerTest {
           Title__c,
           Length_min__c,
           Description__c,
-          Watched__c,
           TV_Series__r.Logo__c, 
           TV_Series__r.Trailer__c
         FROM Episode__c
@@ -173,11 +172,6 @@ public class TVSeriesControllerTest {
               expectedEpisode.Description__c,
               returnedEpisode.Description__c,
               'Incorrect episode description was returned'
-            );
-            System.assertEquals(
-              expectedEpisode.Watched__c,
-              returnedEpisode.Watched__c,
-              'Incorrect episode watched field was returned'
             );
             System.assertEquals(
               expectedEpisode.TV_Series__r.Logo__c,

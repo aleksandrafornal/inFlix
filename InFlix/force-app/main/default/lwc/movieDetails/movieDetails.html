@@ -10,14 +10,6 @@
                 <a href={selectedMovie.Trailer__c} target="_blank">Trailer link</a>
             </div>
             <div class="detail-item">Description: {selectedMovie.Description__c}</div>
-            <lightning-record-edit-form record-id={selectedMovie.Id} object-api-name="Movie__c"
-                onsuccess={handleSuccess} onerror={handleError}>
-                <lightning-input-field field-name="To_watch__c" onchange={saveToWatch}></lightning-input-field>
-            </lightning-record-edit-form>
-            <lightning-record-edit-form record-id={selectedMovie.Id} object-api-name="Movie__c"
-                onsuccess={handleSuccess} onerror={handleError}>
-                <lightning-input-field field-name="Favorite__c" onchange={saveFavorite}></lightning-input-field>
-            </lightning-record-edit-form>
             <div class="space"></div>
             <template if:true={showSuccessMessage}>
                 <div class="success">Your choice was saved!</div>

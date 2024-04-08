@@ -13,12 +13,14 @@ public class RecipesControllerTest {
     @testSetup
     static void setup() {
         Movie__c movie = new Movie__c(
-            Name = 'TestMovie'
+            Name = 'TestMovie',
+            Genres__c = 'Fantasy'
         );
         insert movie;
 
         TV_Series__c tvSeries = new TV_Series__c(
-            Name = 'TestTVSeries'
+            Name = 'TestTVSeries',
+            Genres__c = 'Fantasy'
         );
         insert tvSeries;
  

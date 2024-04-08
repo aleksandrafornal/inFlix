@@ -9,17 +9,7 @@
                 <a href={selectedEpisode.TV_series__r.Trailer__c} target="_blank">Trailer link</a>
             </div>
             <div class="detail-item">Description: {selectedEpisode.Description__c}</div>
-            <lightning-record-edit-form record-id={selectedEpisode.Id} object-api-name="Episode__c"
-                onsuccess={handleSuccess} onerror={handleError}>
-                <lightning-input-field field-name="Watched__c" onchange={saveWatched}></lightning-input-field>
-            </lightning-record-edit-form>
             <div class="space"></div>
-            <template if:true={showSuccessMessage}>
-                <div class="success">Your choice was saved!</div>
-            </template>
-            <template if:true={showErrorMessage}>
-                <div class="error">Something went wrong, try again later.</div>
-            </template>
             <lightning-button class="episodes-button" variant="brand" label="Back to Episodes"
                 onclick={handleBackToEpisodes}></lightning-button>
         </div>
