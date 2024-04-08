@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Episode_name_rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(REGEX( Name ,  Season__r.Name + &quot;E[0-9]{4}&quot;))</errorConditionFormula>
+    <errorMessage>The episode name must start with the season name followed by &apos;E&apos; followed by four digits indicating the episode number (e.g., &apos;SeriesName S01E0001&apos;).</errorMessage>
+</ValidationRule>

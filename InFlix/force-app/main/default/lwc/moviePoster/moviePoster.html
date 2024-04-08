@@ -1,0 +1,10 @@
+<template>
+    <template if:true={moviePosterUrl}>
+        <img src={moviePosterUrl} alt="Movie Poster" />
+    </template>
+    <template if:false={moviePosterUrl}>
+        <div class="message">
+            There is no poster for this Movie, but feel free to add it!
+        </div>
+    </template>
+</template>

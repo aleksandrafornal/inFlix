@@ -1,0 +1,12 @@
+<template>
+    <template if:true={movieTrailerUrl}>
+        <div class="iframe-container">
+            <iframe src={movieTrailerUrl} frameborder="0" allowfullscreen></iframe>
+        </div>
+    </template>
+    <template if:false={movieTrailerUrl}>
+        <div class="message">
+            There is no trailer for this Movie, but feel free to add it!
+        </div>
+    </template>
+</template>

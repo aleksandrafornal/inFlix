@@ -1,0 +1,11 @@
+.iframe-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 460px;
+    height: 185px;
+}
+.message{
+    color: #FF4D00;
+    font-weight: bold;
+}

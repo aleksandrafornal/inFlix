@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Length_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>Length_min__c = 0</errorConditionFormula>
+    <errorDisplayField>Length_min__c</errorDisplayField>
+    <errorMessage>Length of the episode can&apos;t be 0, please change it.</errorMessage>
+</ValidationRule>

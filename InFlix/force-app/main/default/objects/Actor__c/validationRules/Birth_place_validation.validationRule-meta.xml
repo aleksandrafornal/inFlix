@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Birth_place_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(REGEX(Birth_place__c, &quot;^[A-Z][a-zA-Z]*(?:[ -][A-Z][a-zA-Z]*)*$&quot;))</errorConditionFormula>
+    <errorDisplayField>Birth_place__c</errorDisplayField>
+    <errorMessage>Birth place should start with capital letter and consist only letters and spaces, or hyphens between words, where each word starts with a capital letter.</errorMessage>
+</ValidationRule>

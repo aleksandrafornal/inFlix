@@ -1,0 +1,12 @@
+<template>
+    <template if:true={tvSeriesTrailerUrl}>
+        <div class="iframe-container">
+            <iframe src={tvSeriesTrailerUrl} frameborder="0" allowfullscreen></iframe>
+        </div>
+    </template>
+    <template if:false={tvSeriesTrailerUrl}>
+        <div class="message">
+            There is no trailer for this TV Series, but feel free to add it!
+        </div>
+    </template>
+</template>

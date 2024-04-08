@@ -1,0 +1,20 @@
+<template>
+    <template lwc:if={selectedEpisode}>
+        <div class="details-container">
+            <lightning-card title="Episode Details"></lightning-card>
+            <img class="logo" src={selectedEpisode.TV_series__r.Logo__c}></img>
+            <div class="detail-item">Title: {combinedTitle}</div>
+            <div class="detail-item">Length(min): {selectedEpisode.Length_min__c}</div>
+            <div class="detail-item">TV Series trailer:
+                <a href={selectedEpisode.TV_series__r.Trailer__c} target="_blank">Trailer link</a>
+            </div>
+            <div class="detail-item">Description: {selectedEpisode.Description__c}</div>
+            <div class="space"></div>
+            <lightning-button class="episodes-button" variant="brand" label="Back to Episodes"
+                onclick={handleBackToEpisodes}></lightning-button>
+        </div>
+    </template>
+    <template lwc:else>
+        <div>Select an episode</div>
+    </template>
+</template>

@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.space {
+    height: 10px;
+}
+
+.container-episode{
+    max-height: 500px; 
+    overflow-y: auto;
+}
